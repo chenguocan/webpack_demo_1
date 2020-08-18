@@ -9,7 +9,6 @@ button.innerText = "懒加载";
 button.onclick = () => {
     const promise = import("./lazy");
     promise.then((module) => {
-        console.log(module);
         module.default();
     }, () => {
 

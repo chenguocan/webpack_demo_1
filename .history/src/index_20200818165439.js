@@ -7,12 +7,5 @@ div.innerHTML = `
 const button = document.createElement("button");
 button.innerText = "懒加载";
 button.onclick = () => {
-    const promise = import("./lazy");
-    promise.then((module) => {
-        console.log(module);
-        module.default();
-    }, () => {
-
-    })
+    const lazy = import("./lazy");
 }
-div.appendChild(button)
